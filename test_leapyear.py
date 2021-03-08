@@ -53,6 +53,11 @@ class TestListAvg(unittest.TestCase):
             output = out.getvalue().strip() # Retrieve ly's output
             self.assertEqual(output, "2000 is a leap year")
 
+    # Integers only
+    def test5(self):
+        with self.assertRaises(TypeError):
+            leapyear.ly("2000")
+
 # call the tests
 if __name__ == "__main__":
     unittest.main(verbosity=2)
