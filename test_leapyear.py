@@ -51,7 +51,7 @@ class TestListAvg(unittest.TestCase):
         with captured_output() as (out, err):
             leapyear.ly(2000) # Call leapyear
             output = out.getvalue().strip() # Retrieve ly's output
-            self.assertEqual(output, "2100 is a leap year")
+            self.assertEqual(output, "2000 is a leap year")
 
 # call the tests
 if __name__ == "__main__":
