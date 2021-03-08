@@ -10,6 +10,9 @@ global x # Input number variable (int)
 def ly(x):
     if not isinstance(x, int):
         raise TypeError
+    if x < 0:
+        raise ValueError
+    
     Number = str(x)
     
     if x % 4 == 0: # Calculate if leap year
