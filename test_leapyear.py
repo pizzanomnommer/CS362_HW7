@@ -30,14 +30,21 @@ class TestListAvg(unittest.TestCase):
         with captured_output() as (out, err):
             leapyear.ly(2004) # Call leapyear
             output = out.getvalue().strip() # Retrieve ly's output
-            self.assertEqual(output, "2004 is a leap year") # Compare output against fizzbuzz.txt
+            self.assertEqual(output, "2004 is a leap year")
     
     # Use a number not divisible by 4
     def test2(self):
         with captured_output() as (out, err):
             leapyear.ly(2003) # Call leapyear
             output = out.getvalue().strip() # Retrieve ly's output
-            self.assertEqual(output, "2003 is not a leap year") # Compare output against fizzbuzz.txt
+            self.assertEqual(output, "2003 is not a leap year")
+
+    # Use a number both divisible by 4 and 100
+    def test3(self):
+        with captured_output() as (out, err):
+            leapyear.ly(2100) # Call leapyear
+            output = out.getvalue().strip() # Retrieve ly's output
+            self.assertEqual(output, "2100 is not a leap year")
 
 # call the tests
 if __name__ == "__main__":
