@@ -37,7 +37,7 @@ class TestListAvg(unittest.TestCase):
         with captured_output() as (out, err):
             leapyear.ly(2003) # Call leapyear
             output = out.getvalue().strip() # Retrieve ly's output
-            self.assertEqual(output, "2003 is a leap year") # Compare output against fizzbuzz.txt
+            self.assertEqual(output, "2003 is not a leap year") # Compare output against fizzbuzz.txt
 
 # call the tests
 if __name__ == "__main__":
