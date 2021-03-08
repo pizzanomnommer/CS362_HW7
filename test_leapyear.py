@@ -58,6 +58,11 @@ class TestListAvg(unittest.TestCase):
         with self.assertRaises(TypeError):
             leapyear.ly("2000")
 
+    # No negatives
+    def test6(self):
+        with self.assertRaises(ValueError):
+            leapyear.ly(-2000)
+
 # call the tests
 if __name__ == "__main__":
     unittest.main(verbosity=2)
