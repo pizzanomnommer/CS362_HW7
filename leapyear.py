@@ -10,8 +10,11 @@ global x # Input number variable (int)
 
 def ly(x):
     Number = str(x)
-
+    
     if x % 4 == 0: # Calculate if leap year
-        print(Number + " is a leap year")
+        if x % 100 == 0:
+            print(Number + " is not a leap year")
+        else:
+            print(Number + " is a leap year")
     else:
         print(Number + " is not a leap year")
