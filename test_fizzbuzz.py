@@ -27,6 +27,7 @@ def captured_output():
 class TestListAvg(unittest.TestCase):
     # Test stdout against the fizzbuzz.txt file
     def test1(self):
+        self.maxDiff = None # Had to make test output max size unbounded (Also removed comma from fizzbuzz.txt)
         CompFile = open("fizzbuzz.txt", "r") # Open fizzbuzz.txt
         with captured_output() as (out, err):
             fizzbuzz.fb() # Call fizzbuzz

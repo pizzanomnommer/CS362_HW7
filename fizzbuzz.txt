@@ -29,7 +29,7 @@ Fizz
 29
 FizzBuzz
 31
-32,
+32
 Fizz
 34
 Buzz
